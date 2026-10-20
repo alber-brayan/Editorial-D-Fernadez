@@ -75,3 +75,11 @@ La web se ha preparado como proyecto autónomo React/TypeScript, con dependencia
 Pruebas de esta revisión: «A color» abre y reproduce el video silencioso real de María Romero; «Blanco y negro» cambia a la portada real de Center sin filtro de escala de grises, y pulsar su libro reproduce el video silencioso de Center. Se verificaron la decodificación de ambos videos a 540 px, la reapertura consecutiva, el cierre mediante botón y Escape, la restauración del desplazamiento y la conservación de la impresión elegida en el formulario. Un contexto móvil con toque real también abrió los videos correspondientes; el control «A color» funcionó con Enter y recuperó el foco tras cerrar.
 
 TypeScript y build independientes correctos. Navegador sin errores de ejecución, sin desbordes horizontales y con modo oscuro conservado. Inspección a 1440, 768 y 390 px: cero fallos y la advertencia tipográfica ya documentada. El cambio conserva la dirección visual existente y no requiere redibujos; se retiene la valoración propia anterior. Las muestras y grabaciones son materiales proporcionados por la editorial.
+
+## Titular «Textos Personalizados» y traslado local
+
+El titular utiliza Barlow Condensed 700, autoalojada en WOFF2 con su licencia SIL OFL. Se mantiene una composición de dos líneas y Bricolage Grotesque en el resto de la página. Se verificó la carga efectiva de la fuente y la ausencia de errores de ejecución en escritorio, tablet y móvil, incluidas pantallas de 320 px.
+
+La revisión en temas claro y oscuro conserva legibilidad y márgenes. La inspección del nuevo titular a 1440, 768 y 390 px registra cero fallos, con la advertencia tipográfica ya justificada. Se ajustó además la cabecera a 320 px para dar espacio al logo y los controles de apariencia y menú.
+
+Se trasladó la carpeta completa a `bookstudio-ai/Editorial-D-Fernadez`, conservando el historial, el remoto y los recursos. BookStudio excluye este proyecto independiente de Git, TypeScript y ESLint. TypeScript pasó en los dos proyectos después del traslado; las modificaciones locales anteriores del usuario en los componentes 3D del estudio conservaron sus hashes.

@@ -1,4 +1,5 @@
 @font-face{font-family:Editorial;src:url('editorial/bricolage-latin.woff2') format('woff2');font-weight:400 700;font-display:swap}
+@font-face{font-family:EditorialDisplay;src:url('editorial/barlow-condensed-700-latin.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
 
 .site{
   --paper:#f7f9fd;--ground:#edf3f8;--field:#e4f1ef;--ink:#112b48;--soft:#405570;
@@ -111,6 +112,11 @@
 @media(max-width:680px){.inspectorStage{height:300px;min-height:300px}.inspectorBook{scale:.68}}
 
 /* Appearance remains available at the start and in the discreet side menu. */
+.site .heroTitle{font-family:EditorialDisplay,'Arial Narrow',Arial,sans-serif;font-size:clamp(72px,7.2vw,116px);font-weight:700;line-height:.96;letter-spacing:-.025em;max-width:100%;font-kerning:normal}
+@media(max-width:1190px){.site .heroTitle{font-size:clamp(64px,7.2vw,90px)}}
+@media(min-width:681px) and (max-width:940px){.site .heroTitle{font-size:clamp(54px,7.5vw,72px)}}
+@media(max-width:680px){.site .heroTitle{font-size:clamp(48px,15.5vw,94px)}}
+@media(max-width:360px){.site .header .logo{width:160px}}
 .printSampleCaption{display:flex;flex-direction:column;align-items:center;gap:7px;max-width:calc(100% - 32px);text-align:center;line-height:1.4;pointer-events:none}.printSampleCaption strong{display:flex;align-items:center;gap:7px;font-weight:500}
 .site .themeToggle{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:11px 15px;margin-left:auto;border-radius:100px;border:1px solid #d4e0eb;background:#ffffff90;font-size:13px}
 .site .skipLink{color:var(--navy)}

@@ -16,7 +16,7 @@ Idea: En esta página, los textos reales producidos para Atenas, Center y María
 Elemento vivo: seleccionar una portada y girarla; elegir impresión y encuadernación, y llevar el pedido a WhatsApp.
 
 Copy deck:
-Hero: Textos con tu identidad. Textos escolares personalizados con el logo de tu institución y contenidos adaptados a tu currícula. Hechos en Ayacucho, para acompañar cada aprendizaje. Acción: Cotizar para mi institución.
+Hero: Textos Personalizados. Textos escolares personalizados con el logo de tu institución y contenidos adaptados a tu currícula. Hechos en Ayacucho, para acompañar cada aprendizaje. Acción: Cotizar para mi institución.
 Galería: La calidad se ve. Explora nuestros trabajos en movimiento. Portadas, interiores y acabados de textos producidos para instituciones educativas.
 Acabados: Pensados para el día a día. Color que enseña. Blanco y negro que comunica. Impresión láser con textos nítidos y gráficos definidos. Espiral plástico: práctico y flexible; espiral metálico: firme y cómodo; encolado: acabado continuo con páginas bien sujetas.
 Proceso: De tu idea al aula. Conversamos sobre contenidos, cantidades y uso. Definimos impresión y encuadernación. Coordinamos la producción y entrega según tu pedido. No prometer plazos no confirmados.
@@ -40,3 +40,9 @@ La opción oscura conserva la dirección de catálogo: tinta profunda, vidrio az
 La opción «A color» abre directamente el video silencioso de María Romero. Su libro también abre el mismo video. «Blanco y negro» muestra el texto de Center con la portada a color y abre su video al pulsar el libro. La portada conserva el color aunque sus interiores se impriman en blanco y negro. Las dos muestras mantienen el acabado elegido; la galería 3D principal conserva sus ventanas de inspección.
 
 La web se mantiene en un repositorio público propio, Editorial-D-Fernadez, independiente de BookStudio. El pie y la licencia indican la reserva de derechos y se conservan los avisos de terceros.
+
+## Titular y ubicación local del proyecto
+
+Por petición del usuario, el titular pasa a «Textos Personalizados» y usa Barlow Condensed 700 autoalojada, de mayor tamaño y con una composición de dos líneas. Bricolage Grotesque se conserva para el resto de la página. Esta sustitución tipográfica se limita al titular; se conserva la dirección visual del catálogo, sin redibujar el diseño.
+
+El proyecto completo se guarda en `F:\EDITORIAL\bookstudio-ai\Editorial-D-Fernadez`, con su propio repositorio Git. BookStudio ignora esa carpeta en Git, TypeScript y ESLint para conservar la separación entre el estudio y la web.

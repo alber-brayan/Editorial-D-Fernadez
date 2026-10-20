@@ -19,6 +19,8 @@ npm run preview
 
 La vista local se abre en `http://127.0.0.1:3001`. Después de modificar las fuentes, ejecuta otra vez `npm run build` y recarga la página. La salida `dist/` se puede servir en un alojamiento estático. No se necesitan claves de API.
 
+La carpeta local del proyecto está en `F:\EDITORIAL\bookstudio-ai\Editorial-D-Fernadez`. Conserva su repositorio Git independiente; ejecuta estos comandos desde esa carpeta.
+
 ## Organización
 
 ```text

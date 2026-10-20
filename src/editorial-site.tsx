@@ -223,7 +223,7 @@ export default function EditorialSite() {
     <main>
       <section className={styles.hero} id="inicio" aria-labelledby="hero-heading">
         <div className={styles.heroCopy}>
-          <h1 id="hero-heading" data-reveal>Textos con<br />tu identidad.</h1>
+          <h1 id="hero-heading" className={styles.heroTitle} data-reveal>Textos<br />Personalizados</h1>
           <p className={styles.heroDescription} data-reveal>Textos escolares personalizados con <strong>el logo de tu institución</strong> y contenidos adaptados a <strong>tu currícula.</strong></p>
           <a href="#cotizar" className={styles.primaryButton} data-reveal>Cotizar para mi institución <ArrowUpRight size={20} /></a>
           <p className={styles.institutionNotice} data-reveal><strong>Venta exclusiva para instituciones educativas.</strong><span>No realizamos venta individual de ejemplares.</span></p>
