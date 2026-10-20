@@ -5,11 +5,15 @@ import { resolve, dirname, extname, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "../dist");
+const basePath = process.env.PREVIEW_BASE_PATH || "/";
+if (!/^\/(?:[A-Za-z0-9_-]+\/)*$/.test(basePath)) throw Error("PREVIEW_BASE_PATH debe empezar y terminar en /.");
 const types = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".json": "application/json", ".webp": "image/webp", ".jpg": "image/jpeg", ".svg": "image/svg+xml", ".woff2": "font/woff2", ".mp4": "video/mp4" };
 createServer(async (req, res) => {
   try {
     const pathname = decodeURIComponent(new URL(req.url, "http://localhost").pathname);
-    const file = resolve(root, `.${pathname === "/" ? "/index.html" : pathname}`);
+    if (basePath !== "/" && pathname === basePath.slice(0, -1)) { res.writeHead(301, { Location: basePath }).end(); return; }
+    if (!pathname.startsWith(basePath)) { res.writeHead(404).end("No encontrado"); return; }
+    const file = resolve(root, pathname.slice(basePath.length) || "index.html");
     if (file !== root && !file.startsWith(root + sep)) { res.writeHead(403).end(); return; }
     const info = await stat(file);
     if (!info.isFile()) throw Error("Missing file");
@@ -22,4 +26,4 @@ createServer(async (req, res) => {
       createReadStream(file, { start, end }).pipe(res);
     } else { res.writeHead(200, { ...headers, "Content-Length": info.size }); createReadStream(file).pipe(res); }
   } catch { res.writeHead(404).end("No encontrado"); }
-}).listen(3001, "127.0.0.1", () => console.log("Editorial: http://127.0.0.1:3001"));
+}).listen(3001, "127.0.0.1", () => console.log(`Editorial: http://127.0.0.1:3001${basePath}`));

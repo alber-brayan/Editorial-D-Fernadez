@@ -2,7 +2,7 @@
 
 Web de Editorial D’Fernandez: textos escolares personalizados para instituciones educativas en Ayacucho, Perú.
 
-[Visitar la web](https://editorial-dfernandez-ayacucho.shadypony128.chatgpt.site/) · [Ubicación](https://www.google.com/maps/dir/?api=1&destination=-13.13684362522656%2C-74.23237880290648) · [WhatsApp](https://wa.me/51916227046)
+[Visitar la web](https://alber-brayan.github.io/Editorial-D-Fernadez/) · [Ubicación](https://www.google.com/maps/dir/?api=1&destination=-13.13684362522656%2C-74.23237880290648) · [WhatsApp](https://wa.me/51916227046)
 
 **© 2026 Editorial D’Fernandez. Todos los derechos reservados.** El repositorio es público para consulta. El código y los materiales originales mantienen su reserva de derechos; ver [LICENSE](LICENSE). Las dependencias y recursos de terceros conservan sus respectivas licencias; ver [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
@@ -43,6 +43,22 @@ index.html            metadatos y plantilla HTML
 - Google Maps con las coordenadas exactas del local y enlace «Cómo llegar».
 
 ## Publicación
+
+### GitHub Pages
+
+La fuente de Pages es **Deploy from a branch → gh-pages → /(root)** en Settings → Pages. `main` conserva las fuentes y `gh-pages` contiene únicamente la web compilada.
+
+Para actualizar la publicación, con Git autenticado y los cambios de fuentes guardados en un commit:
+
+```sh
+npm run deploy
+```
+
+Este comando comprueba TypeScript, compila y publica el resultado en `gh-pages`. GitHub despliega automáticamente esa rama. El script conserva su historial y no usa pushes forzados.
+
+No publicar directamente la raíz del repositorio: `index.html` es una plantilla y necesita el paso de compilación. Los recursos usan rutas relativas para funcionar tanto en `/Editorial-D-Fernadez/` como en un dominio propio o en la vista local.
+
+### Sites
 
 Este repositorio contiene únicamente la web y sus recursos públicos. Es independiente de BookStudio y no requiere sus API, datos locales ni archivos de producción.
 

@@ -16,7 +16,7 @@ const result = await build({
   jsx: "automatic",
   minifyWhitespace: true,
   minifySyntax: true,
-  external: ["/editorial/*"],
+  external: ["editorial/*"],
   target: ["es2022"],
   define: { "process.env.NODE_ENV": '"production"' },
   metafile: true,
@@ -29,9 +29,10 @@ await build({
   absWorkingDir: root,
   stdin: { contents: 'import { renderToString } from "react-dom/server"; import EditorialSite from "./src/editorial-site"; export const markup = renderToString(<EditorialSite />);', resolveDir: root, loader: "tsx" },
   bundle: true, platform: "node", format: "esm", packages: "external",
-  outfile: resolve(runtime, "render.mjs"), jsx: "automatic", external: ["/editorial/*"],
+  outfile: resolve(runtime, "render.mjs"), jsx: "automatic", external: ["editorial/*"],
 });
 const { markup } = await import(pathToFileURL(resolve(runtime, "render.mjs")).href + `?build=${Date.now()}`);
 const template = await readFile(resolve(root, "index.html"), "utf8");
 await writeFile(resolve(dist, "index.html"), template.replace('<div id="root"></div>', `<div id="root">${markup}</div>`));
+await writeFile(resolve(dist, ".nojekyll"), "");
 console.log(`Sitio preparado: ${Object.keys(result.metafile.outputs).length} archivos de aplicación + recursos de la editorial.`);

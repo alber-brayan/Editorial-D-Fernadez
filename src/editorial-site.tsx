@@ -5,7 +5,7 @@ import { ArrowUpRight, ArrowDown, ChevronLeft, ChevronRight, Rotate3D, Play, Pau
 import styles from "./editorial.module.css";
 import { useGlassDialog } from "./use-glass-dialog";
 
-const asset = (file: string) => `/editorial/${file}`;
+const asset = (file: string) => `./editorial/${file}`;
 const whatsapp = "https://wa.me/51916227046";
 const location = "-13.13684362522656,-74.23237880290648";
 const mapDirections = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location)}`;
