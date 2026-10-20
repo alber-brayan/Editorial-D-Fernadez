@@ -1,0 +1,29 @@
+{
+  "name": "editorial-d-fernadez",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "description": "Web institucional de Editorial D’Fernandez en Ayacucho, Perú.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alber-brayan/Editorial-D-Fernadez.git"
+  },
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "build": "node build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "lucide-react": "^0.577.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "esbuild": "^0.27.0",
+    "typescript": "^5.9.3"
+  }
+}
